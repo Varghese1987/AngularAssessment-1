@@ -1,0 +1,26 @@
+<div class = "modal-header">
+  <h4 class="modal-title" id="modal-basic-title">Simple modal</h4>
+  <button type="button" class="close" aria-label="Close" (click)="activeModal.dismiss('Cross click')">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+    <div class="form-group">
+        <label for="title">Title</label>
+        <input type="text" class="form-control" id="title">
+    </div>
+    <div class="modal-body">
+    <div class="form-group">
+        <label for="type">Type</label>
+        <input class="form-control">
+    </div>
+    <div class="form-group">
+      <label for="content">Content</label>
+      <textarea class="form-control" id="content" rows="3"></textarea>
+    </div>
+    <div class="form-group">
+        <label for="mentor">Instructions for Mentor</label>
+        <textarea class="form-control" id="mentor" rows="3"></textarea>
+      </div>
+      <button (click)="passBack()" type="submit" class="btn btn-primary w-100">Add Topic</button>
+  </div>
+

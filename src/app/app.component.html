@@ -1,0 +1,30 @@
+<h1>Angular assessment</h1>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-2">
+            <div>
+                <button (click)="addDay()" class = "btn btn-primary btn-lg">Add Day</button>
+            </div>
+            <div *ngFor="let item of days" class="btn-group" role="group" aria-label="Basic example">
+                <button type="button" class="btn btn-secondary btn-lg">{{item.name}}</button>
+                <button type="button" class="btn btn-secondary" (click) = "deleteDay()">x</button>
+            </div><br>
+        </div>
+        <div class="col-lg-4">
+            <form hidden = 'true' id ="addTopic">  
+                <div class="row">
+                    <div class=col-lg-4> 
+                        <button (click) = "viewTopicModel()" >+</button>
+                    </div>
+                    <input type="text" placeholder="Search.." name="search">
+                    <button type="submit"><i class="fa fa-search"></i>search</button>
+                </div>
+                <!-- <div (addTopics) = "topicsToAdd($event)">
+                    <template TopicModelComponent></template>                    
+                </div> -->
+                
+            </form>
+        </div>
+        
+    </div>
+</div>
